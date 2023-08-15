@@ -1,4 +1,4 @@
-import { checkNewContact } from "../src/checkNewContact";
+import { checkNewContact } from "../src/checkNewContact.ts";
 import { Contacto } from "../src/contactos";
 
 describe("checkNewContact", () => {
