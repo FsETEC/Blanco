@@ -1,11 +1,12 @@
 import { contactos } from "./contactos";
-
-function findByEmail(ref:string) {
-    for (const key in object) {
-        if (Object.prototype.hasOwnProperty.call(object, key)) {
-            const element = object[key];
-            
-        }
+import { Contacto } from "./contactos";
+function findByEmail(ref: string) {
+  let listaContactos: Contacto[] = [];
+  contactos.forEach((contacto) => {
+    if (contacto.email.includes(ref)) {
+      listaContactos.push(contacto);
     }
+  });
+  return listaContactos;
 }
-export {findByEmail}
+export { findByEmail };
