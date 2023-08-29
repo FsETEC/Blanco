@@ -1,13 +1,13 @@
-import { cambiarNombreoApellido } from "../src/cambiarNombreoApellido";
+import { cambiarNombre,cambiarApellido } from "../src/cambiarNombreoApellido";
 import { Contacto } from "../src/contactos";
 
-describe("cambiarNombreOApellido", () => {
-  test("debe cambiar el nombre del contacto con indice en 0", () => {
-    const contacto: Contacto = cambiarNombreoApellido(0,"Muhammad","Luca");
-    expect(contacto.first_name).toBe("Luca");
+describe("cambiarNombre / cambiarApellido", () => {
+  test("debe cambiar el nombre del contacto con id 1", () => {
+    const contacto: Contacto = cambiarNombre({id: 1, nombre: "Alex"});
+    expect(contacto.first_name).toBe("Alex");
   });
-  test("debe cambiar el apellido del contacto con indice en 0", () => {
-    const contacto: Contacto = cambiarNombreoApellido(0,"Alderwick","Barni");
+  test("debe cambiar el apellido del contacto con id 1", () => {
+    const contacto: Contacto = cambiarApellido({id :1, apellido: "Barni"});
     expect(contacto.last_name).toBe("Barni");
   });
 });
